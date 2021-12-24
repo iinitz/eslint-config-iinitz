@@ -15,14 +15,6 @@ module.exports = {
     requireConfigFile: false,
     ecmaVersion: 'latest',
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
   },
   rules: {
     semi: [

@@ -1,16 +1,28 @@
 module.exports = {
-  extends: 'iinitz/js-base',
+  extends: [
+    'iinitz/js-base',
+  ],
   plugins: [
     'react-hooks',
   ],
   parserOptions: {
     requireConfigFile: false,
     babelOptions: {
-      presets: ['@babel/preset-react'],
+      presets: [
+        '@babel/preset-react',
+      ],
     },
     presets: [
       '@babel/preset-react',
     ],
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   rules: {
     'function-paren-newline': 'off',

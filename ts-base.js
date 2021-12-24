@@ -2,9 +2,11 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb-typescript',
-    'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  plugins: [
+    '@typescript-eslint',
   ],
   env: {
     browser: true,
@@ -21,9 +23,6 @@ module.exports = {
     sourceType: 'module',
   },
   settings: {
-    react: {
-      version: 'detect',
-    },
     settings: {
       'import/resolver': {
         typescript: {},
@@ -34,6 +33,14 @@ module.exports = {
     '@typescript-eslint/semi': [
       2,
       'never',
+    ],
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none',
+        },
+      },
     ],
     'comma-dangle': [
       'error',

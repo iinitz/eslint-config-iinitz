@@ -1,14 +1,21 @@
 module.exports = {
-  extends: 'iinitz/ts-base',
+  extends: [
+    'airbnb/hooks',
+    'iinitz/ts-base',
+  ],
   plugins: [
     'react',
-    '@typescript-eslint',
     'react-hooks',
   ],
   parserOptions: {
     requireConfigFile: false,
     ecmaFeatures: {
       jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
     },
   },
   rules: {
